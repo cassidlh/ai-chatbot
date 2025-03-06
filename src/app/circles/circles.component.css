@@ -1,0 +1,156 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.circle {
+    position:relative;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid rgba(142, 155, 152, 0.662);
+    width: 1300px;
+    height: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility:hidden;
+  }
+  
+  .c1 {
+    width: 1150px;
+    height: 1150px;
+    visibility:visible;
+    margin-bottom: 620px;
+  }
+
+  .c2 {
+    width: 1100px;
+    height: 1100px;
+    visibility:visible;
+  }
+  
+  .c3 {
+    width: 1050px;
+    height: 1050px;
+    visibility:visible;
+  }
+  
+  .c4 {
+    width: 1000px;
+    height: 1000px;
+    visibility:visible;
+  }
+
+  .c5 {
+    width: 950px;
+    height: 950px;
+    visibility:visible;
+  }
+
+  .c6 {
+    width: 900px;
+    height: 900px;
+    visibility:visible;
+  }
+
+  .c7 {
+    width: 850px;
+    height: 850px;
+    visibility:visible;
+  }
+
+  .c8 {
+    width: 800px;
+    height: 800px;
+    visibility:visible;
+  }
+
+  .c9 {
+    width: 750px;
+    height: 750px;
+    visibility:visible;
+  }
+
+  .c10 {
+    width: 700px;
+    height: 700px;
+    visibility:visible;
+  }
+  
+  .c11 {
+    width: 650px;
+    height: 650px;
+    visibility:visible;
+  }
+
+  .c12 {
+    width: 600px;
+    height: 600px;
+    visibility:visible;
+  }
+
+  .c13 {
+    width: 550px;
+    height: 550px;
+    visibility:visible;
+  }
+
+  .c14 {
+    width: 500px;
+    height: 500px;
+    visibility:visible;
+  }
+
+
+  .c15 {
+    width: 450px;
+    height: 450px;
+    visibility:visible;
+  }
+
+  .c16 {
+    width: 400px;
+    height: 400px;
+    visibility:visible;
+  }
+
+  .c17 {
+    width: 350px;
+    height: 350px;
+    visibility:visible;
+  }
+
+  .c18 {
+    width: 300px;
+    height: 300px;
+    visibility:visible;
+  }
+
+  .c19 {
+    width: 250px;
+    height: 250px;
+    visibility:visible;
+  }
+  .c20 {
+    width: 200px;
+    height: 200px;
+    visibility:visible;
+  }
+  .c21 {
+    width: 150px;
+    height: 150px;
+    visibility:visible;
+  }
+  /* .c22 {
+    width: 100px;
+    height: 100px;
+    visibility:visible;
+  } */
+  /* .c23 {
+    width: 50px;
+    height: 50px;
+    visibility:visible;
+  }
+  .c24 {
+    width: 250px;
+    height: 250px;
+    visibility:visible;
+  } */

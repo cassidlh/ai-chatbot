@@ -1,0 +1,77 @@
+.urbanist-regular {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.urbanist-semibold {
+    font-family: "Urbanist", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.urbanist-bold {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.intro .text {
+    font-size: 22px;
+    width: 70%;
+    text-align: center;
+}
+
+.intro .luminaAI {
+    font-size: 35px;
+    margin-top: -70px;
+}
+
+.intro .description {
+    font-size: 22px;
+    margin-top: -60px;
+    color: rgba(255, 255, 255, 0.777);
+    letter-spacing: 2px;
+}
+
+.intro .sign-up {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+#activate {
+    height: 50px;
+    width: 190px;
+    background-color: rgba(19, 19, 255, 0.873);
+    border-radius: 10px;
+    border-color: transparent;
+    color: white;
+    font-size: 14px;
+}
+
+#google {
+    height: 50px;
+    width: 190px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: transparent;
+    color: grey;
+    font-size: 14px;
+}
+
+

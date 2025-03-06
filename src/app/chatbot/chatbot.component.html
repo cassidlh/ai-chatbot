@@ -1,0 +1,29 @@
+<div class  ="scale-intro urbanist-bold">
+    <p> Please read each statement carefully and rate how much you agree or disagree using the following scale: </p>
+    <div id = "scale-intro-nums">
+        <p> 0 - Strongly Disagree </p>
+        <p> 1 - Disagree </p>
+        <p> 2 - Slightly Disagree </p>
+        <p> 3 - Slightly Agree </p>
+        <p> 4 - Agree </p>
+        <p> 5 - Strongly Agree </p>
+    </div>
+    <p>
+         Select the number that best reflects your experience or feelings. 
+        There are no right or wrong answers — please respond honestly. 
+    </p>
+</div>
+
+<div class="wrap">
+    <form>
+      <app-likert question="Question 1" groupName="q1"></app-likert>
+      <app-likert question="Question 2." groupName="q2"></app-likert>
+      <app-likert question="Question 3" groupName="q3"></app-likert>
+      <app-likert question="Question 4" groupName="q4"></app-likert>
+  
+      <div class="buttons">
+        <button class="clear">Clear</button>
+        <button class="submit">Submit</button>
+      </div>
+    </form>
+</div>

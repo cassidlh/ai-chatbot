@@ -1,0 +1,123 @@
+.urbanist-regular {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.urbanist-semibold {
+    font-family: "Urbanist", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.urbanist-bold {
+    font-family: "Urbanist", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+}
+
+.nav-bar {
+    display: flex;
+    direction: horizontal;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.left-nav {
+    display: flex;
+    direction: horizontal;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.nav-bar .left-nav .logo-name {
+    display: flex;
+    direction: horizontal;
+    align-items: center;
+}
+
+.nav-bar .left-nav .logo img{
+    width: 10%;
+    height: 10%;
+}
+
+.LuminaAI {
+    margin-left: -400px;
+}
+
+
+.options {
+    display: flex;
+    direction: horizontal;
+    margin-left: 50px;
+}
+
+.options h3 {
+    margin-right: 40px;
+    font-size: 14px;
+}
+
+.right-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+    gap: 15px;
+}
+
+
+
+.right-nav #notif button {
+        height: 40px;
+        width: 40px;
+        background-color: rgba(111, 136, 132, 0.561);
+        border-radius: 30px;
+        border-color: transparent;
+        color: white;
+        font-size: 14px;
+}
+
+.right-nav #search button {
+    height: 40px;
+    width: 40px;
+    background-color: rgba(111, 136, 132, 0.561);
+    border-radius: 30px;
+    border-color: transparent;
+    color: white;
+    font-size: 14px;
+}
+
+.right-nav #login button{
+    height: 40px;
+    width: 150px;
+    background-color: rgba(111, 136, 132, 0.561);
+    border-radius: 30px;
+    border-color: transparent;
+    color: white;
+    font-size: 14px;
+}
+
+
+hr {
+    height: 0px;
+    color: rgba(255, 255, 255, 0.872);
+}
+
+a {
+    cursor: pointer;  /* Makes it look clickable */
+    text-decoration: none;  /* Remove underline */
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: rgb(68, 46, 46)
+}
+
+.active-link {
+    color: red; /* Change color for active link */
+    font-weight: bold; /* Make it stand out */
+  }
