@@ -39,7 +39,6 @@
   padding: 30px;
   justify-content: center;
   align-items: center;
-
 }
 
 .chatbot-container form .questions {
@@ -55,11 +54,52 @@
 .chatbot-container form .buttons {
   display: flex;
   flex-direction: row;
-  padding: 30px 0;
-  justify-content: right;
+  gap: 10px;
+}
+
+.chatbot-container form .buttons button {
+  border-radius: 30px;
+  height: 50px;
+  width: 150px;
+  margin-top: 20px;
 }
 
 .chatbot-container .video-page {
   display: flex;
   flex-direction: column;
+  justify-content: right;
+}
+
+
+.chatbot-container .video-page .done-chat{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.chatbot-container .video-page .done-chat button{
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.chatbot-container .thank-you-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+}
+
+.chatbot-container .thank-you-page button{
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+button:hover {
+  cursor: pointer;
 }
