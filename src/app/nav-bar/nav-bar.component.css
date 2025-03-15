@@ -114,10 +114,9 @@ a:visited {
 }
 
 a:hover {
-    color: rgb(68, 46, 46)
+    color: rgb(135, 123, 109);
 }
 
-.active-link {
-    color: red; /* Change color for active link */
-    font-weight: bold; /* Make it stand out */
-  }
+a:active {
+    color: rgb(68, 46, 46);
+}
