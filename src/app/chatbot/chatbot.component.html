@@ -1,4 +1,5 @@
-<div class  ="scale-intro urbanist-bold">
+<div class="chatbot-container">
+<div *ngIf="!isVideoVisible" class ="scale-intro urbanist-bold">
     <p> Please read each statement carefully and rate how much you agree or disagree using the following scale: </p>
     <div id = "scale-intro-nums">
         <p> 0 - Strongly Disagree </p>
@@ -14,16 +15,102 @@
     </p>
 </div>
 
-<div class="wrap">
-    <form>
-      <app-likert question="Question 1" groupName="q1"></app-likert>
-      <app-likert question="Question 2." groupName="q2"></app-likert>
-      <app-likert question="Question 3" groupName="q3"></app-likert>
-      <app-likert question="Question 4" groupName="q4"></app-likert>
-  
+<div class="urbanist-regular">
+    <form *ngIf="!isVideoVisible && !isClosingQuestionsVisible">
+      <div class="questions">
+        <div class="q1-5">
+          <app-likert question="I feel overwhelmed by grief in my faily life." groupName="q1"></app-likert>
+          <br>
+          <app-likert question="I have difficulty concentrating or completing tasks due to grief." groupName="q2"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I often feel emotionally numb or disconnected from others." groupName="q3"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I struggle with feelings of guilt, regret, or self-blame related to my loss." groupName="q4"></app-likert>
+          <br>
+          <br>
+          <app-likert question="My sleep patterns have significantly changed (e.g., difficulty sleeping, oversleeping)." groupName="q5"></app-likert>
+          <br>
+          <br>
+        </div>
+
+        <div class="q6-10">
+          <app-likert question="I experience frequent mood swings or bursts of sadness." groupName="q6"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I avoid places, people, or activities that remind me of my loss." groupName="q7"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I feel like I have little to no motivation for things I used to enjoy." groupName="q8"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I lack a strong support system to help me cope with grief." groupName="q9"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I would like to seek professional or peer support to help with my healing process." groupName="q10"></app-likert>
+          <br>
+          <br>
+        </div>
+      </div>
+
       <div class="buttons">
         <button class="clear">Clear</button>
-        <button class="submit">Submit</button>
+        <button class="submit" type="button" (click)="showVideo()">Submit</button>
       </div>
     </form>
+  </div>
+
+  <div class="video-page" *ngIf="isVideoVisible">
+    <video controls style = "height: 100vh;">
+      <source src="ElevatorPitch.m4a" type="video/m4a">
+      Your browser does not support the video tag.
+    </video>
+
+    <button type="button" style="justify-content: right" (click)="hideVideo()">Done Chatting</button>
+  </div>
+
+  <div class="urbanist-regular">
+    <form *ngIf="!isVideoVisible && isClosingQuestionsVisible">
+      <div class="questions">
+        <div class="q1-5">
+          <app-likert question="I feel a greater sense of acceptance regarding my loss." groupName="q1"></app-likert>
+          <br>
+          <br>
+          <app-likert question="Talking about my day with my loved one made me feel supported." groupName="q2"></app-likert>
+          <br>
+          <br>
+          <app-likert question="The session helped me process my grief in a healthy manner." groupName="q3"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I feel less overwhelmed or distressed compared to before the session." groupName="q4"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I feel more emotionally connected to my lost loved one in a comforting way." groupName="q5"></app-likert>
+          <br>
+          <br>
+        </div>
+
+        <div class="q6-10">
+          <app-likert question="I gained new insights or perspectives on my grief journey." groupName="q6"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I feel more hopeful about my ability to cope with grief." groupName="q7"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I would consider using the chatbot again for emotional support." groupName="q8"></app-likert>
+          <br>
+          <br>
+          <app-likert question="Overall, I feel emotionally lighter after the session." groupName="q9"></app-likert>
+          <br>
+          <br>
+          <app-likert question="I feel a sense of relief after expressing my thoughts and emotions." groupName="q10"></app-likert>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <button class="submit">Submit</button>
+    </form>
+  </div>
 </div>

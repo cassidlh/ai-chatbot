@@ -18,19 +18,41 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LikertComponent } from '../likert/likert.component';
 import { CirclesComponent } from '../circles/circles.component';
+import { RouterModule } from '@angular/router'
+import { Router } from '@angular/router';
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-chatbot',
   standalone: true, // Mark it as a standalone component
-  imports: [RouterOutlet, LikertComponent, CirclesComponent], // Import RouterOutlet if needed
+  imports: [RouterModule, RouterOutlet, CommonModule, LikertComponent, CirclesComponent], // Import RouterOutlet if needed
   templateUrl: './chatbot.component.html',
   styleUrls: ['./chatbot.component.css'] // Fix typo (styleUrl → styleUrls)
 })
 export class ChatbotComponent {
-  ngOnInit():any {
-    
+  constructor(private router: Router) { }
+
+  goToAnotherPage() {
+    this.router.navigate(['/track']);
+  }
+
+  isVideoVisible = false;
+  isClosingQuestionsVisible = false;
+
+  showVideo() {
+    this.isVideoVisible = true;
+  }
+
+  hideVideo() {
+    this.isVideoVisible=false;
+    this.isClosingQuestionsVisible=true;
+
   }
 }
+
+
 
