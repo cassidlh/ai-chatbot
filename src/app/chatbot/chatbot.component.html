@@ -1,5 +1,5 @@
 <div class="chatbot-container">
-<div *ngIf="!isVideoVisible && !isThankYouVisible" class ="scale-intro urbanist-bold">
+<div *ngIf="!isDemoVisible && !isThankYouVisible" class ="scale-intro urbanist-bold">
     <p> Please read each statement carefully and rate how much you agree or disagree using the following scale: </p>
     <div id = "scale-intro-nums">
         <p> 0 - Strongly Disagree </p>
@@ -16,7 +16,7 @@
 </div>
 
 <div class="urbanist-regular">
-    <form *ngIf="!isVideoVisible && !isClosingQuestionsVisible && !isThankYouVisible && isIntroVisible">
+    <form *ngIf="!isDemoVisible && !isClosingQuestionsVisible && !isThankYouVisible && isIntroVisible">
       <div class="questions">
         <div class="q1-5">
           <app-likert question="I feel overwhelmed by grief in my daily life." groupName="q1"></app-likert>
@@ -63,19 +63,24 @@
     </form>
   </div>
 
-  <div class="video-page" *ngIf="isVideoVisible">
-    <video controls style = "height: 90vh;">
-      <source src="ElevatorPitch.m4a" type="video/m4a">
-      Your browser does not support the video tag.
+  <div class="demo-page" *ngIf="isDemoVisible">
+    <!-- <div class="demo-images"> -->
+      <!-- <img src="images/cb1.png" alt="Lumina Chat">
+      <img src="images/cb3.png" alt="Lumina Chat">
+      <img src="images/cb2.png" alt="Lumina Chat"> -->
+    <!-- </div> -->
+    <video width="320" height="240" controls>
+      <source src="websiteDemo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
     </video>
 
     <div class="done-chat">
-      <button type="button" style="justify-content: right" (click)="hideVideo()">Done Chatting</button>
+      <button type="button" style="justify-content: right" (click)="hideDemo()">Done Chatting</button>
     </div>
   </div>
 
   <div class="urbanist-regular">
-    <form *ngIf="!isVideoVisible && isClosingQuestionsVisible && !isThankYouVisible && !isIntroVisible">
+    <form *ngIf="!isDemoVisible && isClosingQuestionsVisible && !isThankYouVisible && !isIntroVisible">
       <div class="questions">
         <div class="q1-5">
           <app-likert question="I feel a greater sense of acceptance regarding my loss." groupName="q1"></app-likert>
@@ -120,7 +125,7 @@
     </form>
   </div>
 
-  <div class="thank-you-page urbanist-bold" *ngIf="isThankYouVisible && !isVideoVisible && !isClosingQuestionsVisible && !isIntroVisible"> 
+  <div class="thank-you-page urbanist-bold" *ngIf="isThankYouVisible && !isDemoVisible && !isClosingQuestionsVisible && !isIntroVisible"> 
     <h1>Thank you for sharing your thoughts and feelings with us!</h1>
     <p>Your feedback is valuable in helping us improve our services.</p>
     <button type="button" (click)="resetChat()">Start Over</button>

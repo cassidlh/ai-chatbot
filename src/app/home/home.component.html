@@ -2,7 +2,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 </style>
 
-    <div class = "intro center">
+    <div class = "intro center" *ngIf="!isGoogleSignInVisible">
         <div class = "text">
             <h1 class = "urbanist-regular"> Healing Through Connection: Your Companion in Grief </h1>
         </div>
@@ -14,6 +14,14 @@
         </div>
         <div class = "sign-up">
             <button id ="activate" class="urbanist-regular"> Activate Your Account </button>
-            <button id = "google" class="urbanist-regular"> Sign up with Google </button>
+            <button id = "google" class="urbanist-regular" (click)="googleSignIn(true)"> Sign up with Google </button>
         </div>
+    </div>
+
+    <div class="googleSignIn" *ngIf="isGoogleSignInVisible">
+        <img src="images/googleSignIn.png" alt="Google Sign In">
+    </div>
+
+    <div class="back" *ngIf="isGoogleSignInVisible">
+        <button (click)="googleSignIn(false)"> Back </button>
     </div>

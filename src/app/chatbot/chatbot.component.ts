@@ -41,36 +41,40 @@ export class ChatbotComponent {
   }
 
   isIntroVisible = true;
-  isVideoVisible = false;
+  isDemoVisible = false;
   isClosingQuestionsVisible = false;
   isThankYouVisible = false;
 
   showVideo() {
-    this.isVideoVisible = true;
+    this.isDemoVisible = true;
     this.isIntroVisible = false;
+    window.scrollTo(0, 0);
   }
 
-  hideVideo() {
+  hideDemo() {
     this.isIntroVisible = false;
-    this.isVideoVisible=false;
+    this.isDemoVisible=false;
     this.isClosingQuestionsVisible=true;
+    window.scrollTo(0, 0);
 
   }
 
+  
   thankYouPage() {
     this.isIntroVisible = false;
     this.isClosingQuestionsVisible=false;
-    this.isVideoVisible=false;
+    this.isDemoVisible=false;
     this.isThankYouVisible=true;
-    console.log("Navigating to Thank You Page...")
+    window.scrollTo(0, 0);
     
   }
 
   resetChat() {
     this.isClosingQuestionsVisible=false;
-    this.isVideoVisible=false;
+    this.isDemoVisible=false;
     this.isThankYouVisible=false;
     this.isIntroVisible = true;
+    window.scrollTo(0, 0);
   }
 
 }

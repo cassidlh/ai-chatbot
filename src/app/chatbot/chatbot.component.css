@@ -64,25 +64,42 @@
   margin-top: 20px;
 }
 
-.chatbot-container .video-page {
+.chatbot-container .demo-page {
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
 }
 
+.chatbot-container .demo-page video {
+  height: 80%;
+  width: 80%;
+}
 
-.chatbot-container .video-page .done-chat{
+/* .chatbot-container .demo-page .demo-images {
   display: flex;
-  flex-direction: row;
-  justify-content: right;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-.chatbot-container .video-page .done-chat button{
-  width: 150px;
-  height: 50px;
+.chatbot-container .demo-page .demo-images img {
+  align-self: center;
+  height:65%;
+  width:65%;
+  margin-top: 50px;
+} */
+
+.chatbot-container .done-chat {
+  padding-bottom: 30px;
+}
+.chatbot-container .done-chat button {
   border-radius: 30px;
+  height: 50px;
+  width: 150px;
   margin-top: 20px;
 }
+
 
 .chatbot-container .thank-you-page{
   display: flex;

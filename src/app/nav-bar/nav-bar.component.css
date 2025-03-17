@@ -119,8 +119,13 @@ a:visited {
 
 a:hover {
     color: rgb(135, 123, 109);
+    cursor: pointer;
 }
 
 a:active {
     color: rgb(68, 46, 46);
+}
+
+button:hover {
+    cursor: pointer;
 }

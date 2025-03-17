@@ -5,3 +5,12 @@
 .navBar {
     background-color: rgb(142, 173, 173);
 }
+
+@media screen and (max-width: 768px) {
+
+    app-circles {
+        display: none;
+    }
+  }
+  
+  
