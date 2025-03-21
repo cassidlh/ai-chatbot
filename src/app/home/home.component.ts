@@ -17,5 +17,6 @@ export class HomeComponent {
   googleSignIn(value: boolean){
     this.isGoogleSignInVisible = value;
     console.log("Google Sign In Clicked");
+    console.log(this.isGoogleSignInVisible);
   }
 }

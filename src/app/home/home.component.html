@@ -1,7 +1,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 </style>
-<app-circles></app-circles>
 
     <div class = "intro center" *ngIf="!isGoogleSignInVisible">
         <div class = "text">
@@ -14,15 +13,24 @@
             <h6 class = "urbanist-regular"> Use AI to connect with lost loved ones </h6>
         </div>
         <div class = "sign-up">
+
+            
             <button id ="activate" class="urbanist-regular"> Activate Your Account </button>
             <button id = "google" class="urbanist-regular" (click)="googleSignIn(true)"> Sign up with Google </button>
         </div>
     </div>
 
-    <div class="googleSignIn" *ngIf="isGoogleSignInVisible">
-        <img src="images/googleSignIn.png" alt="Google Sign In">
+    <div class="googleSignIn" *ngIf="isGoogleSignInVisible" style="z-index:10">
+        <img src="images/googleSignIn.png" alt="Google Sign In" usemap = "#googleMap">
+
+        <map name= "#googleMap">
+
+            <a href = "/chatbot">
+            <area shape = "rect" coords="500, 150, 1000, 400" alt = "André Chou" href="/chatbot" title = "André Chou">
+            </a>
+        </map>
     </div>
 
-    <div class="back" *ngIf="isGoogleSignInVisible">
+    <div class="back" *ngIf="isGoogleSignInVisible" style="z-index:10">
         <button (click)="googleSignIn(false)"> Back </button>
     </div>
