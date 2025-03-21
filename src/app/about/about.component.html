@@ -1,1 +1,72 @@
-<p>about works!!</p>
+<div class="about-container urbanist-regular">
+
+    <div class="team">
+        <h1> Meet the Team </h1>
+        <hr>
+        <p> <span class="urbanist-bold" style="font-size: 20px;"> Yash Kadakia </span> -- Team Lead </p>
+        <p> <span class="urbanist-bold" style="font-size: 20px;"> Cassidy Ho </span> -- Chief Technology Officer </p>
+        <p> <span class="urbanist-bold" style="font-size: 20px;"> Stephanie Onwu </span> -- Product Lead</p>
+        <p> <span class="urbanist-bold" style="font-size: 20px;"> Annabelle Wu </span> -- User Experience Lead</p>
+        <p> <span class="urbanist-bold" style="font-size: 20px;"> Moubark Alkharafi </span> -- Research Lead </p>
+    </div>
+
+    <div class="why-lumina">
+        <h1> Lumina AI </h1>
+        <hr>
+        <p> Lumina AI is an adapting, emotionally intelligent chatbot created to deal with 
+            grief from losing a loved one. What sets us apart is that Lumina AI has ability to 
+            replicate conversations with a lost loved one, offering a comforting and familiar
+            presence to aid in the grieving process. 
+            By utilizing past text exchanges between the user and their loved one, the chatbot generates 
+            responses that reflect the deceased person's communication style, fostering a deeply personal 
+            and supportive experience. While its interface is similar to existing AI chatbots, 
+            Lumina AI is uniquely designed to facilitate healing and emotional processing.</p>
+    </div>
+
+    <div class="usage">
+        <h1> Features 
+            <span style="font-weight: lighter; font-size: 18px; margin-left: 10px; text-decoration: underline;"> 
+                <a *ngIf="!isVideoVisible" (click)="showVideo()"> video tutorial </a> 
+                <a *ngIf="isVideoVisible" (click)="closeVideo()"> close video </a> 
+            </span>
+        </h1>
+        <hr>
+
+        <div *ngIf="isVideoVisible">
+            <video controls style="height:80%; width:80%;"> 
+                <source src="luminaWalkthrough.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p>Beyond the chatbot feature, the Lumina website includes two additional sections. 
+            The "About" section provides an overview of Lumina AI, its purpose, and guidance on how to use it effectively. 
+            The "Resources" section offers external mental health support for those who may not yet feel ready 
+            to engage with the chatbot or who seek additional assistance beyond its capabilities.</p>
+    </div>
+
+    <div class="limitations">
+        <h1> Limitations </h1>
+        <hr>
+        <p> Lumina AI aims to provide accessible grief support, but several limitations must be considered. 
+            AI cannot fully replace human therapists, as complex grief often requires human intervention. 
+            Ethical concerns like data privacy, emotional dependence, and user expectations must be carefully managed. 
+            Overcoming linguistic and cultural barriers requires multilingual support and culturally aware responses. 
+            The chatbot's limited crisis intervention skills highlight the need for human support. 
+            Additionally, skepticism about AI for emotional support calls for trust-building through awareness and education.
+        </p>
+    </div>
+
+    <div class="future">
+        <h1> Long Term Goals </h1>
+        <hr>
+        <p> Our long-term goals focus on enhancing Lumina AI's capabilities and reach. 
+            We aim to improve its language model and NLP for more empathetic conversations. 
+            Collaboration with mental health experts will refine responses for accuracy and effectiveness. 
+            Integrating Lumina AI with university mental health services will provide additional support alongside existing resources. 
+            Expanding language accessibility remains a priority. 
+            Finally, partnerships with universities and mental health organizations will drive outreach, credibility, and adoption, 
+            ensuring Lumina AI becomes a valuable grief support tool. </p>
+    </div>
+    
+</div>

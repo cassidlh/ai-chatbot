@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CirclesComponent } from "../circles/circles.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, CirclesComponent, CirclesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

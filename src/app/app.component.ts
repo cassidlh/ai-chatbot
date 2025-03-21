@@ -6,13 +6,25 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
 import { AboutComponent } from "./about/about.component";
 import { ResourcesComponent } from './resources/resources.component';
 import { CirclesComponent } from "./circles/circles.component";
+import { Router, NavigationEnd } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent, CirclesComponent],
+  imports: [NavBarComponent, CirclesComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'aiChatbot';
+
+  isResourcesPage = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.isResourcesPage = this.router.url === '/resources';
+      }
+    });
+  }
 }
